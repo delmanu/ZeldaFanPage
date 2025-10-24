@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Videojuegos</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body class="bg-[#EEE]">
+<!-- Header responsive -->
+<header class="flex flex-col md:flex-row items-center justify-between p-4 gap-4">
+    <div class="logo">
+        <img class="w-[88px] h-[64px]" src="resources/logo.png" alt="Logotipo">
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center w-full md:w-auto">
+        <a href="#" onclick="openRegisterModal(event)"
+           class="px-4 py-2 bg-[#35C18C] w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                      flex items-center justify-center text-center
+                      text-[#EEEEEE] font-bold text-[20px] sm:text-[24px] lg:text-[28px]
+                      hover:bg-[#2da877] transition duration-300">
+            Registrarse
+        </a>
+        <a href="#" onclick="openLoginModal(event)"
+           class="px-4 py-2 w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px] border border-[#35C18C] border-[2px]
+                      flex items-center justify-center text-center
+                      text-[#393939] font-bold text-[20px] sm:text-[24px] lg:text-[28px]
+                      hover:bg-[#35C18C] hover:text-[#EEEEEE] transition duration-300">
+            Iniciar sesión
+        </a>
+    </div>
+</header>
+
+<!-- Nav responsive -->
+<nav class="flex items-center justify-around border-b-[5px] border-[#929292] overflow-x-auto">
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="index.html">
+        Inicio
+    </a>
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="personajes.html">
+        Personajes
+    </a>
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out text-[#EEE]"
+       href="videojuegos.html">
+        Videojuegos
+    </a>
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="acerca-de.html">
+        Acerca de
+    </a>
+</nav>
+
+<!-- Main content responsive -->
+<main>
+    <div class="flex flex-col justify-center items-center px-4">
+        <h1 class="text-[24px] sm:text-[32px] lg:text-[40px] font-bold mt-12 sm:mt-24 lg:mt-[228px] text-center">
+            Videojuegos de la Saga de The Legend of Zelda
+        </h1>
+        <p class="w-full max-w-[1230px] text-[14px] sm:text-[18px] lg:text-[24px] text-center mt-4 sm:mt-6 lg:mt-[18px]">
+            La aventura se teje a través de generaciones de consolas. Ya sea que busques el coraje de un juego específico o desees explorar la línea temporal completa, estás en el lugar correcto. Haz clic en cualquier título y prepárate para revivir la emoción de desenfundar tu primera espada y rescatar a la Princesa.
+        </p>
+    </div>
+</main>
+
+<!-- Section de videojuegos responsive -->
+<section class="flex flex-col items-center justify-center mt-12 sm:mt-24 lg:mt-[228px] px-4">
+    <div id="cards" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-[1400px] w-full">
+        <!-- Card 1 - Tears of the Kingdom -->
+        <div class="game-card bg-[#FFF] rounded-[12px] flex flex-col sm:flex-row items-center p-3 sm:p-4 cursor-pointer"
+             onclick="openModal('Tears of the Kingdom', 'Nintendo Switch', 'resources/zelda-videojuego-totk.webp', 'Una aventura épica que te llevará a explorar los cielos, tierras y profundidades de Hyrule. Descubre nuevos misterios y desafíos mientras luchas por salvar el reino una vez más. Con nuevas habilidades como Fusión y Ultraomano, las posibilidades son infinitas.')">
+            <img class="w-full sm:w-[100px] md:w-[120px] lg:w-[135px] h-[180px] sm:h-[140px] md:h-[160px] lg:h-[180px] object-cover rounded"
+                 src="resources/zelda-videojuego-totk.webp" alt="Tears of the Kingdom">
+            <div class="mt-3 sm:mt-0 sm:ml-3 md:ml-4 text-center sm:text-left w-full">
+                <p class="text-[18px] sm:text-[20px] lg:text-[24px] text-[#B89F64]">
+                    The Legend of Zelda
+                </p>
+                <p class="text-[24px] sm:text-[28px] lg:text-[36px] text-[#B89F64] font-bold leading-tight">
+                    Tears of the Kingdom
+                </p>
+                <img class="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] lg:w-[64px] lg:h-[64px] mt-2 mx-auto sm:mx-0"
+                     src="resources/icon-nintendoswitch.png" alt="Nintendo Switch">
+            </div>
+        </div>
+
+        <!-- Card 2 - Breath of the Wild -->
+        <div class="game-card bg-[#FFF] rounded-[12px] flex flex-col sm:flex-row items-center p-3 sm:p-4 cursor-pointer"
+             onclick="openModal('Breath of the Wild', 'Nintendo Switch', 'resources/portadas/zelda-portada-botw.jpg', 'Adéntrate en un mundo de aventura y descubrimiento. Explora vastos campos, bosques y cimas de montañas mientras descubres lo que le sucedió al Reino de Hyrule en esta impresionante aventura de mundo abierto.')">
+            <img class="w-full sm:w-[100px] md:w-[120px] lg:w-[135px] h-[180px] sm:h-[140px] md:h-[160px] lg:h-[180px] object-cover rounded"
+                 src="resources/portadas/zelda-portada-botw.jpg" alt="Breath of the Wild">
+            <div class="mt-3 sm:mt-0 sm:ml-3 md:ml-4 text-center sm:text-left w-full">
+                <p class="text-[18px] sm:text-[20px] lg:text-[24px] text-[#B89F64]">
+                    The Legend of Zelda
+                </p>
+                <p class="text-[24px] sm:text-[28px] lg:text-[36px] text-[#B89F64] font-bold leading-tight">
+                    Breath of the Wild
+                </p>
+                <img class="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] lg:w-[64px] lg:h-[64px] mt-2 mx-auto sm:mx-0"
+                     src="resources/icon-nintendoswitch.png" alt="Nintendo Switch">
+            </div>
+        </div>
+
+        <!-- Card 3 - Ocarina of Time -->
+        <div class="game-card bg-[#FFF] rounded-[12px] flex flex-col sm:flex-row items-center p-3 sm:p-4 cursor-pointer"
+             onclick="openModal('Ocarina of Time', 'Nintendo 64', 'resources/portadas/zelda-portada-oot.webp', 'Un joven procedente del Bosque Kokiri emprende una búsqueda épica a través del tiempo. Considerado uno de los mejores juegos de todos los tiempos, esta aventura revolucionó el género de acción y aventura.')">
+            <img class="w-full sm:w-[100px] md:w-[120px] lg:w-[135px] h-[180px] sm:h-[140px] md:h-[160px] lg:h-[180px] object-cover rounded"
+                 src="resources/portadas/zelda-portada-oot.webp" alt="Ocarina of Time">
+            <div class="mt-3 sm:mt-0 sm:ml-3 md:ml-4 text-center sm:text-left w-full">
+                <p class="text-[18px] sm:text-[20px] lg:text-[24px] text-[#B89F64]">
+                    The Legend of Zelda
+                </p>
+                <p class="text-[24px] sm:text-[28px] lg:text-[36px] text-[#B89F64] font-bold leading-tight">
+                    Ocarina of Time
+                </p>
+                <img class="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] lg:w-[64px] lg:h-[64px] mt-2 mx-auto sm:mx-0"
+                     src="resources/icon-nintendoswitch.png" alt="Nintendo 64">
+            </div>
+        </div>
+
+        <!-- Card 4 - Majora's Mask -->
+        <div class="game-card bg-[#FFF] rounded-[12px] flex flex-col sm:flex-row items-center p-3 sm:p-4 cursor-pointer"
+             onclick="openModal('Majora\'s Mask', 'Nintendo 64', 'resources/portadas/zelda-portada-mm.webp', 'Link tiene solo tres días para evitar que la Luna caiga sobre Termina. Una historia oscura y emocional donde el tiempo es tu enemigo más grande. Revive las mismas 72 horas una y otra vez mientras intentas salvar el mundo.')">
+            <img class="w-full sm:w-[100px] md:w-[120px] lg:w-[135px] h-[180px] sm:h-[140px] md:h-[160px] lg:h-[180px] object-cover rounded"
+                 src="resources/portadas/zelda-portada-mm.webp" alt="Majora's Mask">
+            <div class="mt-3 sm:mt-0 sm:ml-3 md:ml-4 text-center sm:text-left w-full">
+                <p class="text-[18px] sm:text-[20px] lg:text-[24px] text-[#B89F64]">
+                    The Legend of Zelda
+                </p>
+                <p class="text-[24px] sm:text-[28px] lg:text-[36px] text-[#B89F64] font-bold leading-tight">
+                    Majora's Mask
+                </p>
+                <img class="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] lg:w-[64px] lg:h-[64px] mt-2 mx-auto sm:mx-0"
+                     src="resources/icon-nintendoswitch.png" alt="Nintendo 64">
+            </div>
+        </div>
+
+        <!-- Card 5 - A Link to the Past -->
+        <div class="game-card bg-[#FFF] rounded-[12px] flex flex-col sm:flex-row items-center p-3 sm:p-4 cursor-pointer"
+             onclick="openModal('A Link to the Past', 'Super Nintendo', 'resources/portadas/zelda-portada-alttp.jpg', 'Viaja entre el Mundo de la Luz y el Mundo Oscuro en esta aventura clásica. Link debe rescatar a los descendientes de los Siete Sabios y derrotar al malvado Agahnim. Un juego que definió el estándar para todas las aventuras de Zelda posteriores.')">
+            <img class="w-full sm:w-[100px] md:w-[120px] lg:w-[135px] h-[180px] sm:h-[140px] md:h-[160px] lg:h-[180px] object-cover rounded"
+                 src="resources/portadas/zelda-portada-alttp.jpg" alt="A Link to the Past">
+            <div class="mt-3 sm:mt-0 sm:ml-3 md:ml-4 text-center sm:text-left w-full">
+                <p class="text-[18px] sm:text-[20px] lg:text-[24px] text-[#B89F64]">
+                    The Legend of Zelda
+                </p>
+                <p class="text-[24px] sm:text-[28px] lg:text-[36px] text-[#B89F64] font-bold leading-tight">
+                    A Link to the Past
+                </p>
+                <img class="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] lg:w-[64px] lg:h-[64px] mt-2 mx-auto sm:mx-0"
+                     src="resources/icon-nintendoswitch.png" alt="Super Nintendo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Botón de galería responsive -->
+<section class="flex flex-col justify-center items-center px-4">
+    <div>
+        <a href="galeria.html" class="px-4 py-2 bg-[#35C18C] w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                                           mt-12 sm:mt-16 lg:mt-[128px]
+                                           flex items-center justify-center text-center
+                                           text-[#EEEEEE] font-bold text-[20px] sm:text-[24px] lg:text-[28px]
+                                           hover:bg-[#2da877] transition duration-300">
+            Ir a la Galería
+        </a>
+    </div>
+</section>
+
+<!-- Modal Popup responsive -->
+<div id="gameModal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content mx-4 max-w-[900px]" onclick="event.stopPropagation()">
+        <div class="relative">
+            <!-- Banner Image -->
+            <div class="w-full h-[180px] sm:h-[250px] lg:h-[300px] overflow-hidden rounded-t-[12px]">
+                <img id="modalBanner" class="w-full h-full object-cover" src="" alt="Game Banner">
+            </div>
+
+            <!-- Close Button -->
+            <button onclick="closeModal()"
+                    class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-white rounded-full w-8 h-8 sm:w-10 sm:h-10
+                               flex items-center justify-center text-[20px] sm:text-[24px] font-bold
+                               hover:bg-gray-200 transition z-10">
+                ×
+            </button>
+
+            <!-- Content -->
+            <div class="p-4 sm:p-6 lg:p-8">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <!-- Game Cover -->
+                    <img id="modalCover"
+                         class="w-[140px] h-[190px] sm:w-[160px] sm:h-[220px] lg:w-[180px] lg:h-[240px]
+                                    object-cover rounded-lg shadow-lg mx-auto sm:mx-0 sm:-mt-[80px] lg:-mt-[100px]"
+                         src="" alt="Game Cover">
+
+                    <!-- Game Info -->
+                    <div class="flex-1 text-center sm:text-left">
+                        <p class="text-[18px] sm:text-[20px] lg:text-[24px] text-[#B89F64]">The Legend of Zelda</p>
+                        <h2 id="modalTitle" class="text-[28px] sm:text-[36px] lg:text-[48px] text-[#B89F64] font-bold leading-tight">
+                            Tears of the Kingdom
+                        </h2>
+                        <div class="flex items-center gap-2 mt-3 sm:mt-4 justify-center sm:justify-start">
+                            <img id="modalPlatform" class="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px]"
+                                 src="resources/icon-nintendoswitch.png" alt="Platform">
+                            <span id="modalPlatformText" class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939]">Nintendo Switch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="mt-6 sm:mt-8 space-y-4">
+                    <div>
+                        <h3 class="text-[20px] sm:text-[22px] lg:text-[24px] font-bold text-[#393939] mb-2">Descripción</h3>
+                        <p id="modalDescription" class="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
+                            Una aventura épica que te llevará a explorar los cielos, tierras y profundidades de Hyrule.
+                            Descubre nuevos misterios y desafíos mientras luchas por salvar el reino una vez más.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals de Login y Registro -->
+<div id="loginModal" class="modal-login" onclick="closeLoginModal(event)">
+    <div class="modal-content-wrapper"></div>
+</div>
+
+<div id="registerModal" class="modal-login" onclick="closeRegisterModal(event)">
+    <div class="modal-content-wrapper"></div>
+</div>
+
+<!-- Footer responsive -->
+<footer class="flex flex-col justify-center items-center mt-16 sm:mt-24 lg:mt-[128px]">
+    <div class="flex flex-col sm:flex-row justify-between items-center border-t w-full max-w-[1440px]
+                    px-4 py-4 sm:h-[60px] border-[#929292] gap-2 sm:gap-0">
+        <p class="text-[#929292] text-[12px] sm:text-[14px] text-center sm:text-left">
+            Copyright © 2025 Alba Inc. Todos los derechos reservados.
+        </p>
+        <p class="text-[#929292] text-[12px] sm:text-[14px]">
+            México
+        </p>
+    </div>
+</footer>
+
+<script src="scripts/login.js"></script>
+<script src="scripts/register.js"></script>
+</body>
+</html>

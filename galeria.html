@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Galería - The Legend of Zelda</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/gallery.css">
+</head>
+<body class="bg-[#EEE]">
+<!-- Header responsive -->
+<header class="flex flex-col md:flex-row items-center justify-between p-4 gap-4">
+    <div class="logo">
+        <img class="w-[88px] h-[64px]" src="resources/logo.png" alt="Logotipo">
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center w-full md:w-auto">
+        <a href="#" onclick="openRegisterModal(event)"
+           class="px-4 py-2 bg-[#35C18C] w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                      flex items-center justify-center text-center
+                      text-[#EEEEEE] font-bold text-[20px] sm:text-[24px] lg:text-[28px]
+                      hover:bg-[#2da877] transition duration-300">
+            Registrarse
+        </a>
+        <a href="#" onclick="openLoginModal(event)"
+           class="px-4 py-2 w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px] border border-[#35C18C] border-[2px]
+                      flex items-center justify-center text-center
+                      text-[#393939] font-bold text-[20px] sm:text-[24px] lg:text-[28px]
+                      hover:bg-[#35C18C] hover:text-[#EEEEEE] transition duration-300">
+            Iniciar sesión
+        </a>
+    </div>
+</header>
+
+<nav class="flex items-center justify-around border-b-[5px] border-[#929292]">
+    <a class="text-[20px] text-[#393939] text-center transition duration-300 ease-in-out w-[20%]
+                    hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="index.html">
+        Inicio
+    </a>
+    <a class="text-[20px] text-[#393939] text-center transition duration-300 ease-in-out w-[20%]
+                    hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="personajes.html">
+        Personajes
+    </a>
+    <a class="text-[20px] text-[#393939] text-center transition duration-300 ease-in-out w-[20%]
+                    bg-[#929292] text-[#EEE]"
+       href="galeria.html">
+        Videojuegos > Galería
+    </a>
+    <a class="text-[20px] text-[#393939] text-center transition duration-300 ease-in-out w-[20%]
+                    hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="acerca-de.html">
+        Acerca de
+    </a>
+</nav>
+
+<main class="py-12 px-4">
+    <div class="max-w-[1400px] mx-auto">
+        <h1 class="text-[56px] font-bold text-[#393939] text-center mb-4">
+            Galería de Imágenes
+        </h1>
+        <p class="text-[24px] text-[#666] text-center mb-12 max-w-[900px] mx-auto">
+            Explora las imágenes más icónicas de la saga The Legend of Zelda.
+            Haz clic en cualquier imagen para verla en tamaño completo.
+        </p>
+
+        <!-- Galería de imágenes -->
+        <div class="gallery-grid">
+            <!-- Imagen 1 -->
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="resources/portada_ZTotK.jpg" alt="Tears of the Kingdom">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Tears of the Kingdom</div>
+                    <div class="gallery-icon">🔍</div>
+                </div>
+            </div>
+
+            <!-- Imagen 2 -->
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="resources/zelda-botw-portada.jpeg" alt="Breath of the Wild">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Breath of the Wild</div>
+                    <div class="gallery-icon">🔍</div>
+                </div>
+            </div>
+
+            <!-- Imagen 3 -->
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="resources/zelda-oft-portada.jpg" alt="Ocarina of Time">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Ocarina of Time</div>
+                    <div class="gallery-icon">🔍</div>
+                </div>
+            </div>
+
+            <!-- Imagen 4 -->
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="resources/zelda-mm-portada.jpg" alt="Majora's Mask">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Majora's Mask</div>
+                    <div class="gallery-icon">🔍</div>
+                </div>
+            </div>
+
+            <!-- Imagen 5 -->
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="resources/zelda-galeria-tp.webp" alt="Twilight Princess">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Twilight Princess</div>
+                    <div class="gallery-icon">🔍</div>
+                </div>
+            </div>
+
+            <!-- Imagen 6 -->
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="resources/zelda-galeria-ss.webp" alt="Skyward Sword">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Skyward Sword</div>
+                    <div class="gallery-icon">🔍</div>
+                </div>
+            </div>
+
+            <!-- Imagen 7 -->
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="resources/zelda-galeria-ww.jpg" alt="Wind Waker">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Wind Waker</div>
+                    <div class="gallery-icon">🔍</div>
+                </div>
+            </div>
+
+            <!-- Imagen 8 -->
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="resources/zelda-alttp-portada.jpg" alt="A Link to the Past">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">A Link to the Past</div>
+                    <div class="gallery-icon">🔍</div>
+                </div>
+            </div>
+
+            <!-- Imagen 9 -->
+            <div class="gallery-item" onclick="openLightbox(8)">
+                <img src="resources/zelda-galeria-la.jpeg" alt="Link's Awakening">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Link's Awakening</div>
+                    <div class="gallery-icon">🔍</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<section class="flex flex-col justify-center items-center">
+    <div>
+        <a href="videojuegos.html" class="px-4 py-2 bg-[#35C18C] w-[250px] h-[60px] rounded-[30px] mt-[128px]
+                                    flex items-center justify-center text-center
+                                    text-[#EEEEEE] font-bold text-[28px]">
+            Regresar
+        </a>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1); event.stopPropagation();">‹</button>
+    <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1); event.stopPropagation();">›</button>
+
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightbox-image" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+</div>
+
+<div id="loginModal" class="modal-login" onclick="closeLoginModal(event)">
+    <!-- El contenido se cargará dinámicamente desde login-form.html -->
+    <div class="modal-content-wrapper"></div>
+</div>
+
+<!-- Modal de Registro -->
+<div id="registerModal" class="modal-login" onclick="closeRegisterModal(event)">
+    <!-- El contenido se cargará dinámicamente desde register-form.html -->
+    <div class="modal-content-wrapper"></div>
+</div>
+
+<footer class="flex flex-col justify-center items-center mt-[128px]">
+    <div class="flex justify-between items-center border-t w-full max-w-[1440px] h-[60px] border-[#929292] px-4">
+        <p class="text-[#929292]">
+            Copyright © 2025 Alba Inc. Todos los derechos reservados.
+        </p>
+        <p class="text-[#929292]">
+            México
+        </p>
+    </div>
+</footer>
+<script src="scripts/login.js"></script>
+<script src="scripts/register.js"></script>
+<script src="scripts/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personajes</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="bg-[#EEEEEE]">
+<!-- Header responsive -->
+<header class="flex flex-col md:flex-row items-center justify-between p-4 gap-4">
+    <div class="logo">
+        <img class="w-[88px] h-[64px]" src="resources/logo.png" alt="Logotipo">
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center w-full md:w-auto">
+        <a href="#" onclick="openRegisterModal(event)"
+           class="px-4 py-2 bg-[#35C18C] w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                      flex items-center justify-center text-center
+                      text-[#EEEEEE] font-bold text-[20px] sm:text-[24px] lg:text-[28px]
+                      hover:bg-[#2da877] transition duration-300">
+            Registrarse
+        </a>
+        <a href="#" onclick="openLoginModal(event)"
+           class="px-4 py-2 w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px] border border-[#35C18C] border-[2px]
+                      flex items-center justify-center text-center
+                      text-[#393939] font-bold text-[20px] sm:text-[24px] lg:text-[28px]
+                      hover:bg-[#35C18C] hover:text-[#EEEEEE] transition duration-300">
+            Iniciar sesión
+        </a>
+    </div>
+</header>
+
+<!-- Nav responsive -->
+<nav class="flex items-center justify-around border-b-[5px] border-[#929292] overflow-x-auto">
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="index.html">
+        Inicio
+    </a>
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out text-[#EEE]"
+       href="personajes.html">
+        Personajes
+    </a>
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="videojuegos.html">
+        Videojuegos
+    </a>
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="acerca-de.html">
+        Acerca de
+    </a>
+</nav>
+
+<!-- Main content responsive -->
+<main>
+    <div class="flex flex-col justify-center items-center px-4">
+        <h1 class="text-[24px] sm:text-[32px] lg:text-[40px] font-bold mt-12 sm:mt-24 lg:mt-[228px] text-center">
+            Personajes de la Saga de The Legend of Zelda
+        </h1>
+        <p class="w-full max-w-[1230px] text-[14px] sm:text-[18px] lg:text-[24px] text-center mt-4 sm:mt-6 lg:mt-[18px]">
+            Cada templo, cada mazmorra y cada rincón de Hyrule guarda una historia... y un personaje clave. Algunos te guiarán con sabiduría, otros te desafiarán con maldad, y unos pocos te harán reír. Aquí están los rostros, las historias y las conexiones que dan vida a la saga. ¿Estás listo para desvelar sus secretos?
+        </p>
+    </div>
+</main>
+
+<!-- Section de personajes responsive -->
+<section class="flex flex-col justify-center items-center mt-12 sm:mt-24 lg:mt-[200px] px-4">
+    <h1 class="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-6 sm:mb-8 lg:mb-[32px] text-center">
+        Personajes principales
+    </h1>
+
+    <!-- Grid responsive de tarjetas -->
+    <div id="cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-[1400px] w-full">
+        <!-- Card 01 - Princesa Zelda -->
+        <div id="card01"
+             class="bg-[#FFFFFF] w-full max-w-[420px] mx-auto rounded-[15px] shadow-2xl
+                        flex items-center flex-col p-4 sm:p-6
+                        transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+            <img class="w-full max-w-[369px] h-[250px] sm:h-[300px] lg:h-[326px] object-cover rounded-lg mt-2 sm:mt-4"
+                 src="resources/zelda-personaje-princesazelda.webp" alt="Princesa Zelda">
+            <h2 class="game-title font-bold text-[28px] sm:text-[32px] lg:text-[36px] mt-4 sm:mt-6 text-[#B89F64] text-center">
+                Princesa Zelda
+            </h2>
+            <p class="text-[16px] sm:text-[18px] lg:text-[20px] w-full max-w-[335px] text-center mt-8 sm:mt-12 lg:mt-[64px]">
+                Es la princesa descendiente de la Familia Real de Hyrule. Zelda porta la Trifuerza de la Sabiduría.
+            </p>
+        </div>
+
+        <!-- Card 02 - Link -->
+        <div id="card02"
+             class="bg-[#FFFFFF] w-full max-w-[420px] mx-auto rounded-[15px] shadow-2xl
+                        flex items-center flex-col p-4 sm:p-6
+                        transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+            <img class="w-full max-w-[369px] h-[250px] sm:h-[300px] lg:h-[326px] object-cover rounded-lg mt-2 sm:mt-4"
+                 src="resources/zelda-personaje-link.webp" alt="Link">
+            <h2 class="game-title font-bold text-[28px] sm:text-[32px] lg:text-[36px] mt-4 sm:mt-6 text-[#B89F64] text-center">
+                Link
+            </h2>
+            <p class="text-[16px] sm:text-[18px] lg:text-[20px] w-full max-w-[335px] text-center mt-8 sm:mt-12 lg:mt-[64px]">
+                El Héroe Elegido por las Diosas, portador de la Espada Maestra y representante de la Trifuerza del Valor.
+            </p>
+        </div>
+
+        <!-- Card 03 - Ganondorf -->
+        <div id="card03"
+             class="bg-[#FFFFFF] w-full max-w-[420px] mx-auto rounded-[15px] shadow-2xl
+                        flex items-center flex-col p-4 sm:p-6
+                        transition-all duration-300 hover:scale-105 hover:shadow-3xl
+                        md:col-span-2 lg:col-span-1">
+            <img class="w-full max-w-[369px] h-[250px] sm:h-[300px] lg:h-[326px] object-cover rounded-lg mt-2 sm:mt-4"
+                 src="resources/zelda-personaje-ganondorf.png" alt="Ganondorf">
+            <h2 class="game-title font-bold text-[28px] sm:text-[32px] lg:text-[36px] mt-4 sm:mt-6 text-[#B89F64] text-center">
+                Ganondorf
+            </h2>
+            <p class="text-[16px] sm:text-[18px] lg:text-[20px] w-full max-w-[335px] text-center mt-8 sm:mt-12 lg:mt-[64px]">
+                Es la reencarnación del heraldo de la muerte. Representante de la Trifuerza del Poder.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Modals -->
+<div id="loginModal" class="modal-login" onclick="closeLoginModal(event)">
+    <div class="modal-content-wrapper"></div>
+</div>
+
+<div id="registerModal" class="modal-login" onclick="closeRegisterModal(event)">
+    <div class="modal-content-wrapper"></div>
+</div>
+
+<!-- Footer responsive -->
+<footer class="flex flex-col justify-center items-center mt-16 sm:mt-24 lg:mt-[128px]">
+    <div class="flex flex-col sm:flex-row justify-between items-center border-t w-full max-w-[1440px]
+                    px-4 py-4 sm:h-[60px] border-[#929292] gap-2 sm:gap-0">
+        <p class="text-[#929292] text-[12px] sm:text-[14px] text-center sm:text-left">
+            Copyright © 2025 Alba Inc. Todos los derechos reservados.
+        </p>
+        <p class="text-[#929292] text-[12px] sm:text-[14px]">
+            México
+        </p>
+    </div>
+</footer>
+
+<script src="scripts/login.js"></script>
+<script src="scripts/register.js"></script>
+</body>
+</html>

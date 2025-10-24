@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acerca de - The Legend of Zelda</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="bg-[#EEE]">
+<!-- Header responsive -->
+<header class="flex flex-col md:flex-row items-center justify-between p-4 gap-4">
+    <div class="logo">
+        <img class="w-[88px] h-[64px]" src="resources/logo.png" alt="Logotipo">
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center w-full md:w-auto">
+        <a href="#" onclick="openRegisterModal(event)"
+           class="px-4 py-2 bg-[#35C18C] w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                      flex items-center justify-center text-center
+                      text-[#EEEEEE] font-bold text-[20px] sm:text-[24px] lg:text-[28px]
+                      hover:bg-[#2da877] transition duration-300">
+            Registrarse
+        </a>
+        <a href="#" onclick="openLoginModal(event)"
+           class="px-4 py-2 w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px] border border-[#35C18C] border-[2px]
+                      flex items-center justify-center text-center
+                      text-[#393939] font-bold text-[20px] sm:text-[24px] lg:text-[28px]
+                      hover:bg-[#35C18C] hover:text-[#EEEEEE] transition duration-300">
+            Iniciar sesión
+        </a>
+    </div>
+</header>
+
+<nav class="flex items-center justify-around border-b-[5px] border-[#929292]">
+    <a class="text-[20px] text-[#393939] text-center transition duration-300 ease-in-out w-[20%]
+                    hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="index.html">
+        Inicio
+    </a>
+    <a class="text-[20px] text-[#393939] text-center transition duration-300 ease-in-out w-[20%]
+                    hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="personajes.html">
+        Personajes
+    </a>
+    <a class="text-[20px] text-[#393939] text-center transition duration-300 ease-in-out w-[20%]
+                    hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="videojuegos.html">
+        Videojuegos
+    </a>
+    <a class="text-[20px] text-[#393939] text-center transition duration-300 ease-in-out w-[20%]
+                    bg-[#929292] text-[#EEE]"
+       href="acerca-de.html">
+        Acerca de
+    </a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section py-20 mt-8">
+    <div class="max-w-[1200px] mx-auto px-4 text-center">
+        <h1 class="text-[56px] font-bold text-white mb-6">
+            La Leyenda que Nunca Muere
+        </h1>
+        <p class="text-[24px] text-white/90 max-w-[800px] mx-auto">
+            Desde 1986, The Legend of Zelda ha cautivado a millones de jugadores alrededor del mundo,
+            convirtiéndose en una de las franquicias más icónicas de la historia de los videojuegos.
+        </p>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 px-4">
+    <div class="max-w-[1200px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="stat-card bg-white rounded-[12px] p-8 text-center shadow-lg">
+                <div class="text-[48px] font-bold text-[#35C18C] mb-2">38+</div>
+                <div class="text-[20px] text-[#393939]">Años de Historia</div>
+            </div>
+
+            <div class="stat-card bg-white rounded-[12px] p-8 text-center shadow-lg">
+                <div class="text-[48px] font-bold text-[#B89F64] mb-2">20+</div>
+                <div class="text-[20px] text-[#393939]">Juegos Principales</div>
+            </div>
+
+            <div class="stat-card bg-white rounded-[12px] p-8 text-center shadow-lg">
+                <div class="text-[48px] font-bold text-[#35C18C] mb-2">130M+</div>
+                <div class="text-[20px] text-[#393939]">Copias Vendidas</div>
+            </div>
+
+            <div class="stat-card bg-white rounded-[12px] p-8 text-center shadow-lg">
+                <div class="text-[48px] font-bold text-[#B89F64] mb-2">∞</div>
+                <div class="text-[20px] text-[#393939]">Aventuras por Vivir</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Historia Section -->
+<section class="py-16 px-4 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+        <h2 class="text-[48px] font-bold text-[#393939] text-center mb-12">
+            Su Historia
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="resources/zelda-autor.png"
+                     alt="Historia de Zelda"
+                     class="rounded-[12px] shadow-xl w-full">
+            </div>
+
+            <div class="space-y-6">
+                <p class="text-[20px] text-[#666] leading-relaxed">
+                    Todo comenzó en 1986 cuando Shigeru Miyamoto creó un juego que revolucionaría
+                    la industria: The Legend of Zelda. Inspirado en sus aventuras de infancia
+                    explorando cuevas y bosques cerca de Kioto, Miyamoto imaginó un mundo donde
+                    los jugadores pudieran vivir sus propias aventuras.
+                </p>
+
+                <p class="text-[20px] text-[#666] leading-relaxed">
+                    Desde entonces, la franquicia ha evolucionado a través de múltiples consolas
+                    y generaciones, pero siempre manteniendo su esencia: exploración, puzzles
+                    ingeniosos, combates memorables y una historia épica de coraje y valentía.
+                </p>
+
+                <p class="text-[20px] text-[#666] leading-relaxed">
+                    Este sitio web es un homenaje a esa leyenda, un lugar donde fans nuevos y
+                    veteranos pueden explorar la rica historia de Hyrule y sus habitantes.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="py-16 px-4">
+    <div class="max-w-[1000px] mx-auto">
+        <h2 class="text-[48px] font-bold text-[#393939] text-center mb-12">
+            Momentos Históricos
+        </h2>
+
+        <div class="space-y-8">
+            <div class="timeline-item flex gap-6 items-start">
+                <div class="bg-[#B89F64] text-white rounded-full w-[80px] h-[80px] flex items-center justify-center font-bold text-[20px] flex-shrink-0">
+                    1986
+                </div>
+                <div class="bg-white p-6 rounded-[12px] shadow-lg flex-1">
+                    <h3 class="text-[24px] font-bold text-[#393939] mb-2">El Nacimiento de una Leyenda</h3>
+                    <p class="text-[18px] text-[#666]">
+                        Se lanza el primer juego de The Legend of Zelda para NES, introduciendo el mundo de Hyrule.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item flex gap-6 items-start">
+                <div class="bg-[#35C18C] text-white rounded-full w-[80px] h-[80px] flex items-center justify-center font-bold text-[20px] flex-shrink-0">
+                    1998
+                </div>
+                <div class="bg-white p-6 rounded-[12px] shadow-lg flex-1">
+                    <h3 class="text-[24px] font-bold text-[#393939] mb-2">Salto al 3D</h3>
+                    <p class="text-[18px] text-[#666]">
+                        Ocarina of Time revoluciona los juegos de aventura al llevar a Zelda al mundo tridimensional.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item flex gap-6 items-start">
+                <div class="bg-[#B89F64] text-white rounded-full w-[80px] h-[80px] flex items-center justify-center font-bold text-[20px] flex-shrink-0">
+                    2017
+                </div>
+                <div class="bg-white p-6 rounded-[12px] shadow-lg flex-1">
+                    <h3 class="text-[24px] font-bold text-[#393939] mb-2">Reinventando la Fórmula</h3>
+                    <p class="text-[18px] text-[#666]">
+                        Breath of the Wild redefine el género de mundo abierto y se convierte en un fenómeno global.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item flex gap-6 items-start">
+                <div class="bg-[#35C18C] text-white rounded-full w-[80px] h-[80px] flex items-center justify-center font-bold text-[20px] flex-shrink-0">
+                    2023
+                </div>
+                <div class="bg-white p-6 rounded-[12px] shadow-lg flex-1">
+                    <h3 class="text-[24px] font-bold text-[#393939] mb-2">Lágrimas del Reino</h3>
+                    <p class="text-[18px] text-[#666]">
+                        Tears of the Kingdom expande el universo con nuevas mecánicas y una historia épica.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item flex gap-6 items-start">
+                <div class="bg-[#B89F64] text-white rounded-full w-[80px] h-[80px] flex items-center justify-center font-bold text-[20px] flex-shrink-0">
+                    2025
+                </div>
+                <div class="bg-white p-6 rounded-[12px] shadow-lg flex-1">
+                    <h3 class="text-[24px] font-bold text-[#393939] mb-2">La Aventura Continúa</h3>
+                    <p class="text-[18px] text-[#666]">
+                        La comunidad sigue creciendo y nuevas generaciones descubren la magia de Hyrule.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Equipo Section -->
+<section class="py-16 px-4 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+        <h2 class="text-[48px] font-bold text-[#393939] text-center mb-4">
+            Sobre Este Proyecto
+        </h2>
+        <p class="text-[20px] text-[#666] text-center max-w-[800px] mx-auto mb-12">
+            Este sitio web fue creado por fans, para fans. Nuestro objetivo es preservar
+            y celebrar la rica historia de The Legend of Zelda.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-[100px] h-[100px] bg-[#35C18C] rounded-full mx-auto mb-4 flex items-center justify-center text-white text-[40px] font-bold">
+                    🎮
+                </div>
+                <h3 class="text-[24px] font-bold text-[#393939] mb-2">Misión</h3>
+                <p class="text-[18px] text-[#666]">
+                    Crear un espacio donde los fans puedan explorar, aprender y compartir su amor por Zelda.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-[100px] h-[100px] bg-[#B89F64] rounded-full mx-auto mb-4 flex items-center justify-center text-white text-[40px] font-bold">
+                    ⚔️
+                </div>
+                <h3 class="text-[24px] font-bold text-[#393939] mb-2">Visión</h3>
+                <p class="text-[18px] text-[#666]">
+                    Ser la comunidad de referencia en español para todo lo relacionado con The Legend of Zelda.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-[100px] h-[100px] bg-[#35C18C] rounded-full mx-auto mb-4 flex items-center justify-center text-white text-[40px] font-bold">
+                    🛡️
+                </div>
+                <h3 class="text-[24px] font-bold text-[#393939] mb-2">Valores</h3>
+                <p class="text-[18px] text-[#666]">
+                    Pasión, comunidad, respeto por la obra original y dedicación a la excelencia.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 px-4 bg-gradient-to-r from-[#35C18C] to-[#2da877]">
+    <div class="max-w-[800px] mx-auto text-center">
+        <h2 class="text-[48px] font-bold text-white mb-6">
+            Únete a la Aventura
+        </h2>
+        <p class="text-[24px] text-white/90 mb-8">
+            Regístrate para recibir noticias, actualizaciones y contenido exclusivo sobre The Legend of Zelda.
+        </p>
+        <a href="#" class="inline-block px-12 py-4 bg-white text-[#35C18C] rounded-[30px] text-[24px] font-bold hover:shadow-2xl transition duration-300">
+            Crear Cuenta Gratuita
+        </a>
+    </div>
+</section>
+
+<div id="loginModal" class="modal-login" onclick="closeLoginModal(event)">
+    <!-- El contenido se cargará dinámicamente desde login-form.html -->
+    <div class="modal-content-wrapper"></div>
+</div>
+
+<!-- Modal de Registro -->
+<div id="registerModal" class="modal-login" onclick="closeRegisterModal(event)">
+    <!-- El contenido se cargará dinámicamente desde register-form.html -->
+    <div class="modal-content-wrapper"></div>
+</div>
+
+<footer class="flex flex-col justify-center items-center mt-[64px]">
+    <div class="flex justify-between items-center border-t w-full max-w-[1440px] h-[60px] border-[#929292] px-4">
+        <p class="text-[#929292]">
+            Copyright © 2025 Alba Inc. Todos los derechos reservados.
+        </p>
+        <p class="text-[#929292]">
+            México
+        </p>
+    </div>
+</footer>
+<script src="scripts/login.js"></script>
+<script src="scripts/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="bg-[#EEEEEE]">
+<!-- Header responsive -->
+<header class="flex flex-col md:flex-row items-center justify-between p-4 gap-4">
+    <div class="logo">
+        <img class="w-[88px] h-[64px]" src="resources/logo.png" alt="Logotipo">
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center w-full md:w-auto">
+        <a href="#" onclick="openRegisterModal(event)"
+           class="px-4 py-2 bg-[#35C18C] w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                      flex items-center justify-center text-center
+                      text-[#EEEEEE] font-bold text-[20px] sm:text-[24px] lg:text-[28px]">
+            Registrarse
+        </a>
+        <a href="#" onclick="openLoginModal(event)"
+           class="px-4 py-2 w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px] border border-[#35C18C] border-[2px]
+                      flex items-center justify-center text-center
+                      text-[#393939] font-bold text-[20px] sm:text-[24px] lg:text-[28px]">
+            Iniciar sesión
+        </a>
+    </div>
+</header>
+
+<!-- Nav responsive -->
+<nav class="flex items-center justify-around border-b-[5px] border-[#929292] overflow-x-auto">
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out text-[#EEE]"
+       href="index.html">
+        Inicio
+    </a>
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="personajes.html">
+        Personajes
+    </a>
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="videojuegos.html">
+        Videojuegos
+    </a>
+    <a class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#393939] text-center transition duration-300 ease-in-out
+                  min-w-[80px] sm:min-w-[100px] lg:w-[20%] py-2
+                  hover:bg-[#929292] hover:transition hover:duration-150 hover:ease-in-out hover:text-[#EEE]"
+       href="acerca-de.html">
+        Acerca de
+    </a>
+</nav>
+
+<!-- Main content responsive -->
+<main class="flex flex-col items-center justify-center w-full max-w-[1230px] px-4 sm:px-6 lg:px-8 mx-auto mt-12 sm:mt-24 lg:mt-[160px]">
+    <h1 class="font-bold text-[24px] sm:text-[32px] lg:text-[40px] text-center">
+        ¡Bienvenido a mi portal acerca de los videojuegos de Zelda!
+    </h1>
+    <p class="text-[16px] sm:text-[20px] lg:text-[24px] text-center mt-4 sm:mt-6 lg:mt-[24px]">
+        Aquí hablaremos y daremos información acerca de los juegos de Zelda, desde el más nuevo; siendo Tears of the Kingdom, hasta el que comenzó con la franquicia, la idea de esta página es que cada usuario pueda compartir sus ideas y a su vez explorar acerca de los detalles, personajes y curiosidades de los juegos que están disponibles en esta página.
+    </p>
+
+    <button class="px-4 py-2 w-full sm:w-[200px] lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                       mt-12 sm:mt-24 lg:mt-[178px]
+                       flex items-center justify-center text-center
+                       bg-[#B89F64] text-[#EEE] font-bold text-[20px] sm:text-[24px] lg:text-[28px]
+                       hover:bg-[#a08a55] transition duration-300">
+        ¡Empecemos!
+    </button>
+</main>
+
+<!-- Content section responsive -->
+<div id="content" class="flex flex-col items-center justify-center w-full max-w-[1276px] px-4 sm:px-6 lg:px-8 mx-auto">
+    <h1 class="font-bold text-[20px] sm:text-[24px] lg:text-[28px] mt-16 sm:mt-24 lg:mt-[205px] mb-4 sm:mb-5 lg:mb-[21px] text-center">
+        ¿Ya has probado el último juego de la saga?
+    </h1>
+
+    <!-- Game Card 1 -->
+    <div id="game01" class="flex flex-col w-full transition-all duration-300 ease-in-out
+                                hover:bg-[#FFF] hover:scale-[1.02] lg:hover:scale-105 hover:shadow-2xl hover:shadow-gray-500/50 hover:p-3 sm:hover:p-4 lg:hover:p-6 hover:rounded-[20px] lg:hover:rounded-[40px]">
+        <img class="w-full h-[200px] sm:h-[280px] lg:h-[329px] object-cover object-center rounded-[20px] lg:rounded-[30px]"
+             style="object-position: center 8%"
+             src="resources/portada_ZTotK.jpg" alt="Zelda: Tears of the Kingdom">
+        <h1 class="game-title text-left text-[24px] sm:text-[32px] lg:text-[40px] text-[#B89F64] mt-6 sm:mt-8 lg:mt-[44px]">
+            The Legend Of Zelda: Tears of the Kingdom
+        </h1>
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-[48px]">
+            <p class="text-[14px] sm:text-[18px] lg:text-[24px] text-left mt-4 sm:mt-6 lg:mt-[11px] w-full lg:w-[882px]">
+                The Legend of Zelda: Tears of the Kingdom es un videojuego de acción-aventura y mundo abierto de 2023 de la serie The Legend of Zelda, desarrollado por la filial Nintendo EPD en colaboración con Monolith Soft y publicado por Nintendo para la consola Nintendo Switch. Es la decimonovena entrega de la serie y sirve argumentalmente como secuela de The Legend of Zelda: Breath of the Wild. Su fecha de lanzamiento fue el 12 de mayo de 2023.
+            </p>
+            <div class="flex flex-col gap-3 sm:gap-4 w-full lg:w-auto">
+                <a class="bg-[#B89F64] w-full lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                             flex items-center justify-center text-center
+                             text-[#EEEEEE] font-bold text-[18px] sm:text-[22px] lg:text-[28px]
+                             hover:bg-[#a08a55] transition duration-300"
+                   href="videojuegos.html">
+                    ¡Quiero ver más!
+                </a>
+                <a class="bg-[#35C18C] w-full lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                             flex items-center justify-center text-center
+                             text-[#EEEEEE] font-bold text-[18px] sm:text-[22px] lg:text-[28px]
+                             hover:bg-[#2da877] transition duration-300"
+                   href="https://www.nintendo.com/es-es/Juegos/Juegos-de-Nintendo-Switch/The-Legend-of-Zelda-Tears-of-the-Kingdom-1576884.html">
+                    Sitio Oficial
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Card 2 -->
+    <div id="game02" class="flex flex-col w-full mt-12 sm:mt-16 lg:mt-[7.5rem] transition-all duration-300 ease-in-out
+                                hover:bg-[#FFF] hover:scale-[1.02] lg:hover:scale-105 hover:shadow-2xl hover:shadow-gray-500/50 hover:p-3 sm:hover:p-4 lg:hover:p-6 hover:rounded-[20px] lg:hover:rounded-[40px]">
+        <img class="w-full h-[200px] sm:h-[280px] lg:h-[329px] object-cover object-center rounded-[20px] lg:rounded-[30px]"
+             style="object-position: center 40%"
+             src="resources/zelda-botw-portada.jpeg" alt="Zelda: Breath of the Wild">
+        <h1 class="game-title text-left text-[24px] sm:text-[32px] lg:text-[40px] text-[#B89F64] mt-6 sm:mt-8 lg:mt-[44px]">
+            The Legend Of Zelda: Breath of the Wild
+        </h1>
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-[48px]">
+            <p class="text-[14px] sm:text-[18px] lg:text-[24px] text-left mt-4 sm:mt-6 lg:mt-[11px] w-full lg:w-[882px]">
+                The Legend of Zelda: Breath of the Wild sigue la historia de Link, un héroe legendario que despierta tras un letargo de cien años en un mundo devastado por la guerra. Con
+                la ayuda de la vieja Impa y los pueblos aledaños, Link debe explorar una inmensa y
+                peligrosa tierra, recuperar sus recuerdos perdidos y salvar el reino de Hyrule de la
+                maldición de Ganon. El juego se destaca por su mapa interactivo y libertad de
+                exploración, permitiendo al jugador elegir el orden y la forma en que desea completar la historia.
+            </p>
+            <div class="flex flex-col gap-3 sm:gap-4 w-full lg:w-auto">
+                <a class="bg-[#B89F64] w-full lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                             flex items-center justify-center text-center
+                             text-[#EEEEEE] font-bold text-[18px] sm:text-[22px] lg:text-[28px]
+                             hover:bg-[#a08a55] transition duration-300"
+                   href="videojuegos.html">
+                    ¡Quiero ver más!
+                </a>
+                <a class="bg-[#35C18C] w-full lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                             flex items-center justify-center text-center
+                             text-[#EEEEEE] font-bold text-[18px] sm:text-[22px] lg:text-[28px]
+                             hover:bg-[#2da877] transition duration-300"
+                   href="https://www.nintendo.com/es-es/Juegos/Juegos-de-Nintendo-Switch/The-Legend-of-Zelda-Breath-of-the-Wild-1173609.html">
+                    Sitio Oficial
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Card 3 -->
+    <div id="game03" class="flex flex-col w-full mt-12 sm:mt-16 lg:mt-[7.5rem] transition-all duration-300 ease-in-out
+                                hover:bg-[#FFF] hover:scale-[1.02] lg:hover:scale-105 hover:shadow-2xl hover:shadow-gray-500/50 hover:p-3 sm:hover:p-4 lg:hover:p-6 hover:rounded-[20px] lg:hover:rounded-[40px]">
+        <img class="w-full h-[200px] sm:h-[280px] lg:h-[329px] object-cover object-center rounded-[20px] lg:rounded-[30px]"
+             style="object-position: center 60%"
+             src="resources/zelda-oft-portada.jpg" alt="Zelda: Ocarina of Time">
+        <h1 class="game-title text-left text-[24px] sm:text-[32px] lg:text-[40px] text-[#B89F64] mt-6 sm:mt-8 lg:mt-[44px]">
+            The Legend Of Zelda: Ocarina of Time
+        </h1>
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-[48px]">
+            <p class="text-[14px] sm:text-[18px] lg:text-[24px] text-left mt-4 sm:mt-6 lg:mt-[11px] w-full lg:w-[882px]">
+                En esta épica aventura, tomas el rol de Link, un joven del Bosque Kokiri que recibe la visita de Navi, un hada enviada por el Gran Árbol Deku. El árbol, protector del bosque, le encomienda a Link la misión de detener una fuerza maligna que amenaza el reino de Hyrule.
+                A medida que Link explora templos ancestrales y conoce personajes clave, descubre que debe viajar entre el pasado y el futuro usando la mística Ocarina del Tiempo.
+            </p>
+            <div class="flex flex-col gap-3 sm:gap-4 w-full lg:w-auto">
+                <a class="bg-[#B89F64] w-full lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                             flex items-center justify-center text-center
+                             text-[#EEEEEE] font-bold text-[18px] sm:text-[22px] lg:text-[28px]
+                             hover:bg-[#a08a55] transition duration-300"
+                   href="videojuegos.html">
+                    ¡Quiero ver más!
+                </a>
+                <a class="bg-[#35C18C] w-full lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                             flex items-center justify-center text-center
+                             text-[#EEEEEE] font-bold text-[18px] sm:text-[22px] lg:text-[28px]
+                             hover:bg-[#2da877] transition duration-300"
+                   href="https://www.nintendo.com/es-es/Juegos/Nintendo-64/The-Legend-of-Zelda-Ocarina-of-Time-269536.html">
+                    Sitio Oficial
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Card 4 -->
+    <div id="game04" class="flex flex-col w-full mt-12 sm:mt-16 lg:mt-[7.5rem] transition-all duration-300 ease-in-out
+                                hover:bg-[#FFF] hover:scale-[1.02] lg:hover:scale-105 hover:shadow-2xl hover:shadow-gray-500/50 hover:p-3 sm:hover:p-4 lg:hover:p-6 hover:rounded-[20px] lg:hover:rounded-[40px]">
+        <img class="w-full h-[200px] sm:h-[280px] lg:h-[329px] object-cover object-center rounded-[20px] lg:rounded-[30px]"
+             style="object-position: center 40%"
+             src="resources/zelda-mm-portada.jpg" alt="Zelda: Majora's Mask">
+        <h1 class="game-title text-left text-[24px] sm:text-[32px] lg:text-[40px] text-[#B89F64] mt-6 sm:mt-8 lg:mt-[44px]">
+            The Legend Of Zelda: Majora's Mask
+        </h1>
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-[48px]">
+            <p class="text-[14px] sm:text-[18px] lg:text-[24px] text-left mt-4 sm:mt-6 lg:mt-[11px] w-full lg:w-[882px]">
+                Tras los eventos de Ocarina of Time, Link llega al misterioso mundo de Termina, donde descubre que la luna caerá en tres días, destruyendo todo. Para evitar el desastre, debe recuperar su ocarina, enfrentarse al enigmático Skull Kid poseído por la poderosa Máscara de Majora, y manipular el tiempo para resolver acertijos, ayudar a los habitantes y superar templos llenos de peligros.
+            </p>
+            <div class="flex flex-col gap-3 sm:gap-4 w-full lg:w-auto">
+                <a class="bg-[#B89F64] w-full lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                             flex items-center justify-center text-center
+                             text-[#EEEEEE] font-bold text-[18px] sm:text-[22px] lg:text-[28px]
+                             hover:bg-[#a08a55] transition duration-300"
+                   href="videojuegos.html">
+                    ¡Quiero ver más!
+                </a>
+                <a class="bg-[#35C18C] w-full lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                             flex items-center justify-center text-center
+                             text-[#EEEEEE] font-bold text-[18px] sm:text-[22px] lg:text-[28px]
+                             hover:bg-[#2da877] transition duration-300"
+                   href="https://www.nintendo.com/es-es/Juegos/Nintendo-64/The-Legend-of-Zelda-Majora-s-Mask-269525.html">
+                    Sitio Oficial
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Card 5 -->
+    <div id="game05" class="flex flex-col w-full mt-12 sm:mt-16 lg:mt-[7.5rem] transition-all duration-300 ease-in-out
+                                hover:bg-[#FFF] hover:scale-[1.02] lg:hover:scale-105 hover:shadow-2xl hover:shadow-gray-500/50 hover:p-3 sm:hover:p-4 lg:hover:p-6 hover:rounded-[20px] lg:hover:rounded-[40px]">
+        <img class="w-full h-[200px] sm:h-[280px] lg:h-[329px] object-cover object-center rounded-[20px] lg:rounded-[30px]"
+             style="object-position: center 40%"
+             src="resources/zelda-alttp-portada.jpg" alt="Zelda: A Link to the Past">
+        <h1 class="game-title text-left text-[24px] sm:text-[32px] lg:text-[40px] text-[#B89F64] mt-6 sm:mt-8 lg:mt-[44px]">
+            The Legend Of Zelda: A Link to the Past
+        </h1>
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-[48px]">
+            <p class="text-[14px] sm:text-[18px] lg:text-[24px] text-left mt-4 sm:mt-6 lg:mt-[11px] w-full lg:w-[882px]">
+                En esta clásica aventura de Super Nintendo, Link debe rescatar al reino de Hyrule del malvado hechicero Agahnim, quien planea liberar al demoníaco Ganon. Para lograrlo, Link viaja entre dos mundos paralelos —el Mundo de la Luz y el Mundo Oscuro— resolviendo mazmorras, salvando a los descendientes de los Siete Sabios y empuñando la legendaria Espada Maestra.
+            </p>
+            <div class="flex flex-col gap-3 sm:gap-4 w-full lg:w-auto">
+                <a class="bg-[#B89F64] w-full lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                             flex items-center justify-center text-center
+                             text-[#EEEEEE] font-bold text-[18px] sm:text-[22px] lg:text-[28px]
+                             hover:bg-[#a08a55] transition duration-300"
+                   href="videojuegos.html">
+                    ¡Quiero ver más!
+                </a>
+                <a class="bg-[#35C18C] w-full lg:w-[250px] h-[50px] lg:h-[60px] rounded-[30px]
+                             flex items-center justify-center text-center
+                             text-[#EEEEEE] font-bold text-[18px] sm:text-[22px] lg:text-[28px]
+                             hover:bg-[#2da877] transition duration-300"
+                   href="https://www.nintendo.com/es-es/Juegos/Super-Nintendo/The-Legend-of-Zelda-A-Link-to-the-Past-841179.html">
+                    Sitio Oficial
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<div id="loginModal" class="modal-login" onclick="closeLoginModal(event)">
+    <div class="modal-content-wrapper"></div>
+</div>
+
+<div id="registerModal" class="modal-login" onclick="closeRegisterModal(event)">
+    <div class="modal-content-wrapper"></div>
+</div>
+
+<!-- Footer responsive -->
+<footer class="flex flex-col justify-center items-center mt-16 sm:mt-24 lg:mt-[128px]">
+    <div class="flex flex-col sm:flex-row justify-between items-center border-t w-full max-w-[1440px]
+                    px-4 py-4 sm:h-[60px] border-[#929292] gap-2 sm:gap-0">
+        <p class="text-[#929292] text-[12px] sm:text-[14px] text-center sm:text-left">
+            Copyright © 2025 Alba Inc. Todos los derechos reservados.
+        </p>
+        <p class="text-[#929292] text-[12px] sm:text-[14px]">
+            México
+        </p>
+    </div>
+</footer>
+
+<script src="scripts/login.js"></script>
+<script src="scripts/register.js"></script>
+</body>
+</html>
