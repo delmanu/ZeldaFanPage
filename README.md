@@ -1,7 +1,17 @@
 # Documentación del Proyecto - The Legend of Zelda Fan Site
 
 ## Índice
-
+### 1. [Descripción General](#Descripcion-General)
+### 2. [Estructura del Proyecto](#Estructura-del-Proyecto)
+### 3. [Páginas HTML](#Paginas-HTML)
+### 4. [Estilos CSS](#Estilos-CSS)
+### 5. [Funcionalidades JavaScript](#Funcionalidades-JavaScript)
+### 6. [Características Responsive](#Caracteristicas-Responsive)
+### 7. [Componentes Reutilizables](#Componentes-Reutilizables)
+### 8. [Mejores Prácticas Implementadas](#Mejores-Practicas-Implementadas)
+### 9. [Resumen de Funcionalidades](#Resumen-de-Funcionalidaes)
+### 10. [Conlcusión](#Conclusion)
+### 11. [Links](#Repositorio-en-GitHub)
 
 -------
 ## Descripción General
@@ -565,12 +575,12 @@ xl:  1280px  /* Desktop */
 ````
 ---
 ### Tabla de Resoluciones
-| Dispositivo | Ancho | Breakpoint | Cambios Principales |
-| :--- | :--- | :--- | :--- |
-| Móvil pequeño | < 480px | base | Columnas, textos 14-24px, padding reducido |
-| Móvil grande | 481-767px | `sm:` | Algunos elementos en fila, textos 18-32px |
-| Tablet | 768-1024px | `md:` | 2 columnas, layout híbrido |
-| Desktop | 1025px+ | `lg:` | 3+ columnas, tamaños completos |
+| Dispositivo   | Ancho      | Breakpoint | Cambios Principales                        |
+|:--------------|:-----------|:-----------|:-------------------------------------------|
+| Móvil pequeño | < 480px    | base       | Columnas, textos 14-24px, padding reducido |
+| Móvil grande  | 481-767px  | `sm:`      | Algunos elementos en fila, textos 18-32px  |
+| Tablet        | 768-1024px | `md:`      | 2 columnas, layout híbrido                 |
+| Desktop       | 1025px+    | `lg:`      | 3+ columnas, tamaños completos             |
 
 ## Componentes Reutilizables
 1. **Header (Usado en todas las páginas)**
@@ -662,16 +672,16 @@ Texto del Botón
 ---
 
 ## Resumen de Funcionalidades
-| Característica | Páginas | Descripción |
-| :--- | :--- | :--- |
-| Sistema de Autenticación | Todas | Modales de login/registro con validación |
-| Diseño Responsive | Todas | Adaptación a móvil, tablet y desktop |
-| Navegación | Todas | Menú consistente con página activa destacada |
-| Galería Interactiva | galeria.html | Lightbox con navegación y transiciones |
-| Modales de Información | videojuegos.html | Popups con detalles de juegos |
-| Animaciones | Todas | Hover effects, transiciones, fadeIn/slideIn |
-| Timeline Histórico | acerca-de.html | Línea de tiempo con animación escalonada |
-| Cards Interactivas | personajes.html | Tarjetas con hover y grid responsive |
+| Característica           | Páginas          | Descripción                                  |
+|:-------------------------|:-----------------|:---------------------------------------------|
+| Sistema de Autenticación | Todas            | Modales de login/registro con validación     |
+| Diseño Responsive        | Todas            | Adaptación a móvil, tablet y desktop         |
+| Navegación               | Todas            | Menú consistente con página activa destacada |
+| Galería Interactiva      | galeria.html     | Lightbox con navegación y transiciones       |
+| Modales de Información   | videojuegos.html | Popups con detalles de juegos                |
+| Animaciones              | Todas            | Hover effects, transiciones, fadeIn/slideIn  |
+| Timeline Histórico       | acerca-de.html   | Línea de tiempo con animación escalonada     |
+| Cards Interactivas       | personajes.html  | Tarjetas con hover y grid responsive         |
 ---
 
 ## Conclusión
